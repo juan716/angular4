@@ -1,0 +1,49 @@
+<form [formGroup]="loginForm" (ngSubmit)="submitLogin($event)" novalidate>
+  <div class="ui-g">
+    <div class="ui-g-4"></div>
+    <div class="ui-g-4">
+      <p-card title="Ingreso" subtitle="Bienvenido a personalsoft" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+        <p-header>
+          <img src="Card" width="10%" src="https://media.licdn.com/media/AAMAAQDGAAoAAQAAAAAAAA67AAAAJDNiMjE4NzYzLTg5YjktNDc3Yy1hNWMwLThlNGRjYWE2ODI0Yw.png">
+        </p-header>
+        <div>
+
+          <div class="ui-g">
+            <div class="ui-g-12">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon">
+                  <i class="fa fa-user"></i>
+                </span>
+                <input type="text" pInputText placeholder="Username" style="width:100%" formControlName="username" [ngClass]="{ 'error': loginForm.get('username').touched && loginForm.get('username').invalid }">
+              </div>
+            </div>
+          </div>
+          <div class="ui-g">
+            <div class="ui-g-12">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon">
+                  <i class="fa fa-key"></i>
+                </span>
+                <input type="password" pInputText placeholder="Password" style="width:100%" formControlName="password" [ngClass]="{ 'error': loginForm.get('password').touched && loginForm.get('password').invalid }">
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <p-footer>
+          <button pButton type="submit" label="Ingresar" style="width:100%"></button>
+          <div class="ui-g">
+            <div class="ui-g-5"></div>
+            <div class="ui-g-4">
+              <a href="javascript://" class="signup" >Registro</a>
+            </div>
+            <div class="ui-g-3"></div>
+          </div>
+        </p-footer>
+      </p-card>
+
+    </div>
+    <div class="ui-g-4"></div>
+  </div>
+</form>
